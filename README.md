@@ -11,12 +11,13 @@ This service is build for to collect products survey data.
 3. Allow user to submit product survey question by selecting an answer
 from 1 to 5 for each question
 
+
+## Run the Application
+
 ### Prerequisites
 * JDK 1.8 or later
 * Maven 3.2+
 
-
-## Run the Application
 If you use Maven, run the following command in a terminal window (in the complete) directory :
 
 ./mvnw spring-boot:run
