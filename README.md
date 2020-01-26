@@ -20,15 +20,22 @@ from 1 to 5 for each question
 
 If you use Maven, run the following command in a terminal window (in the complete) directory :
 
-./mvnw spring-boot:run
 
-or execute the main method from ProductSurveyApplication class
+```bash
+mvn spring-boot:run
+```
 
-## Api's
+Alternatively, execute the main method from ProductSurveyApplication class
 
-* Add questions : http://localhost:8084/api/product/{productId}/questions/add
-* Get product questions : http://localhost:8084/api/product/{productId}/questions
-* Submit survey http://localhost:8084/api/survey/product/{productId}/user/{userId}/submission
+The app will start running at <http://localhost:8084>.
+
+## Explore Rest APIs
+
+The app defines following CRUD APIs.
+
+* Add questions to product : http://localhost:8084/api/product/{productId}/questions/add
+* Get questions for product : http://localhost:8084/api/product/{productId}/questions
+* Submit product survey: http://localhost:8084/api/survey/product/{productId}/user/{userId}/submission
 
 ## Built With
 * [Maven](https://maven.apache.org/) - Dependency Management
