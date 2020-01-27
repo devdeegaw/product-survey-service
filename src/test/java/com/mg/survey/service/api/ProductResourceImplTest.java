@@ -22,6 +22,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -82,9 +83,15 @@ public class ProductResourceImplTest {
     }
 
     private List<QuestionDto> getTestQuestionDtos(){
+        List<QuestionDto> dtos = new ArrayList<>();
         QuestionDto questionDto = new QuestionDto();
         questionDto.setQuestionText("text");
-        return Collections.singletonList(questionDto);
+
+        QuestionDto questionDto1 = new QuestionDto();
+        questionDto1.setQuestionText("text");
+        dtos.add(questionDto);
+        dtos.add(questionDto1);
+        return dtos;
     }
 
 }

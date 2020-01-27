@@ -6,6 +6,7 @@ import com.mg.survey.service.service.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @RestController
@@ -24,7 +25,7 @@ public class ProductResourceImpl implements ProductResource {
     @Override
     @PostMapping("/{productId}/questions/add")
     public void addProductQuestion(@PathVariable("productId") int productId,
-                                   @RequestBody List<QuestionDto> questionDtos) {
+                                   @RequestBody Set<QuestionDto> questionDtos) {
         productService.addQuestion(productId,
                 questionDtos.stream()
                         .map(questionTransformer::transformToQuestion).collect(Collectors.toList()));
